@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210122 10:51:49.519" rpa="false">
+<suite id="s1" name="WebLoginPage" source="C:\Users\Arman\PycharmProjects\Livmore_Web\TestSuite\Web\WebLoginPage.robot">
+<test id="s1-t1" name="T-1: Verify elements are prsent on Livmore webpage or not">
+<kw name="Test Setup" library="GenericFunction">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210122 10:51:49.783" level="INFO">Opening browser 'chrome' to base url 'https://vantxqa.livmor.com/userLogin'.</msg>
+<status status="PASS" starttime="20210122 10:51:49.782" endtime="20210122 10:52:01.057"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210122 10:52:01.057" endtime="20210122 10:52:02.171"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:51:49.782" endtime="20210122 10:52:02.171"></status>
+</kw>
+<kw name="Verify Title, Logo And Other Links" library="GenericFunction">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${login_page_title}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:02.179" level="INFO">Page title is 'LIVMOR'.</msg>
+<status status="PASS" starttime="20210122 10:52:02.172" endtime="20210122 10:52:02.179"></status>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls an element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${login_page_privacy}</arg>
+</arguments>
+<status status="PASS" starttime="20210122 10:52:02.179" endtime="20210122 10:52:02.546"></status>
+</kw>
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${login_page_contact_us_link}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:02.568" level="INFO">Current page contains link '//a[@href="https://www.livmor.com/techsupportcontact"]'.</msg>
+<status status="PASS" starttime="20210122 10:52:02.546" endtime="20210122 10:52:02.568"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${login_page_privacy}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:02.578" level="INFO">Current page contains element '//span[@data-target="#privacyModal"]'.</msg>
+<status status="PASS" starttime="20210122 10:52:02.569" endtime="20210122 10:52:02.578"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${login_page_tnc}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:02.594" level="INFO">Current page contains element '//span[@data-target="#termsModal"]'.</msg>
+<status status="PASS" starttime="20210122 10:52:02.578" endtime="20210122 10:52:02.594"></status>
+</kw>
+<kw name="Page Should Contain Image" library="SeleniumLibrary">
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${login_page_livmor_logo}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:02.614" level="INFO">Current page contains image '//img[@class="inversLogo"]'.</msg>
+<status status="PASS" starttime="20210122 10:52:02.594" endtime="20210122 10:52:02.614"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:52:02.172" endtime="20210122 10:52:02.614"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210122 10:52:02.615" endtime="20210122 10:52:04.799"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:51:49.781" endtime="20210122 10:52:04.800" critical="yes"></status>
+</test>
+<test id="s1-t2" name="T-2: Verify Login Fields and Button">
+<kw name="Test Setup" library="GenericFunction">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:04.803" level="INFO">Opening browser 'chrome' to base url 'https://vantxqa.livmor.com/userLogin'.</msg>
+<status status="PASS" starttime="20210122 10:52:04.802" endtime="20210122 10:52:12.139"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210122 10:52:12.140" endtime="20210122 10:52:13.257"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:52:04.802" endtime="20210122 10:52:13.257"></status>
+</kw>
+<kw name="Verify Input Fields, Show Password and Login Button" library="GenericFunction">
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>id:${login_page_username_field}</arg>
+<arg>placeholder</arg>
+<arg>${login_page_username_field_placeholder}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20210122 10:52:13.593" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210122 10:52:13.285" endtime="20210122 10:52:13.593"></status>
+</kw>
+<msg timestamp="20210122 10:52:13.703" level="FAIL">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.141)
+</msg>
+<status status="FAIL" starttime="20210122 10:52:13.258" endtime="20210122 10:52:13.703"></status>
+</kw>
+<status status="FAIL" starttime="20210122 10:52:13.258" endtime="20210122 10:52:13.704"></status>
+</kw>
+<status status="FAIL" starttime="20210122 10:52:04.801" endtime="20210122 10:52:13.704" critical="yes">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.141)
+</status>
+</test>
+<test id="s1-t3" name="T-3: Check Login Fuctionality with Username(Invaid) and Password(Valid)">
+<kw name="Test Setup" library="GenericFunction">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:13.707" level="INFO">Opening browser 'chrome' to base url 'https://vantxqa.livmor.com/userLogin'.</msg>
+<status status="PASS" starttime="20210122 10:52:13.707" endtime="20210122 10:52:21.541"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210122 10:52:21.541" endtime="20210122 10:52:22.655"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:52:13.707" endtime="20210122 10:52:22.655"></status>
+</kw>
+<kw name="Login to Livmor Portal" library="Login_Functionality">
+<arguments>
+<arg>username=${login_patient_username_invalid}</arg>
+<arg>password=${login_patient_password_valid}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${login_page_username_field}</arg>
+<arg>timeout=15 seconds</arg>
+<arg>error=Element not present</arg>
+</arguments>
+<status status="PASS" starttime="20210122 10:52:22.657" endtime="20210122 10:52:22.675"></status>
+</kw>
+<kw name="Enter Username" library="Login_Functionality">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${login_page_username_field}</arg>
+<arg>timeout=15 seconds</arg>
+<arg>error=username field not present</arg>
+</arguments>
+<status status="PASS" starttime="20210122 10:52:22.677" endtime="20210122 10:52:22.691"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_username_field}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:22.691" level="INFO">Clicking element '//input[@id="userId"]'.</msg>
+<status status="PASS" starttime="20210122 10:52:22.691" endtime="20210122 10:52:22.777"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_username_field}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:22.778" level="INFO">Typing text 'domini' into text field '//input[@id="userId"]'.</msg>
+<status status="PASS" starttime="20210122 10:52:22.778" endtime="20210122 10:52:22.892"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_login_button}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:22.893" level="INFO">Clicking element '//button[@id="btn_login"]'.</msg>
+<status status="PASS" starttime="20210122 10:52:22.892" endtime="20210122 10:52:22.985"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:52:22.676" endtime="20210122 10:52:22.986"></status>
+</kw>
+<kw name="Enter Password" library="Login_Functionality">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${login_page_password_field}</arg>
+<arg>timeout=15 seconds</arg>
+<arg>error=password field not present</arg>
+</arguments>
+<status status="PASS" starttime="20210122 10:52:22.987" endtime="20210122 10:52:23.009"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_password_field}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:23.009" level="INFO">Clicking element '//input[@id="password"]'.</msg>
+<status status="PASS" starttime="20210122 10:52:23.009" endtime="20210122 10:52:23.111"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_password_field}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:23.112" level="INFO">Typing password into text field '//input[@id="password"]'.</msg>
+<status status="PASS" starttime="20210122 10:52:23.111" endtime="20210122 10:52:23.211"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_login_button}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:23.212" level="INFO">Clicking element '//button[@id="btn_login"]'.</msg>
+<status status="PASS" starttime="20210122 10:52:23.211" endtime="20210122 10:52:24.476"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:52:22.986" endtime="20210122 10:52:24.477"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_login_button}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:24.478" level="INFO">Clicking element '//button[@id="btn_login"]'.</msg>
+<status status="PASS" starttime="20210122 10:52:24.477" endtime="20210122 10:52:24.547"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:52:22.656" endtime="20210122 10:52:24.547"></status>
+</kw>
+<kw name="Validate Error Message and Page URL on entering Wrong Credentials" library="Login_Functionality">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${login_error_message_locator}</arg>
+<arg>timeout=15 seconds</arg>
+<arg>error=Page still loading</arg>
+</arguments>
+<status status="PASS" starttime="20210122 10:52:24.548" endtime="20210122 10:52:24.565"></status>
+</kw>
+<kw name="Validate Page URL with wrong or blank credentials" library="Login_Functionality">
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser URL.</doc>
+<assign>
+<var>${return_url}</var>
+</assign>
+<msg timestamp="20210122 10:52:24.570" level="INFO">${return_url} = https://vantxqa.livmor.com/userLoginError?error=1</msg>
+<status status="PASS" starttime="20210122 10:52:24.566" endtime="20210122 10:52:24.570"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${return_url}</arg>
+<arg>${login_error_url}</arg>
+</arguments>
+<status status="PASS" starttime="20210122 10:52:24.571" endtime="20210122 10:52:24.571"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:52:24.565" endtime="20210122 10:52:24.572"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_error_message_locator}</arg>
+</arguments>
+<assign>
+<var>${return_error_message}</var>
+</assign>
+<msg timestamp="20210122 10:52:24.598" level="INFO">${return_error_message} = </msg>
+<status status="PASS" starttime="20210122 10:52:24.572" endtime="20210122 10:52:24.599"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${return_error_message}</arg>
+<arg>${login_error_message}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:24.599" level="FAIL"> != Invalid Username or Password.</msg>
+<status status="FAIL" starttime="20210122 10:52:24.599" endtime="20210122 10:52:24.599"></status>
+</kw>
+<status status="FAIL" starttime="20210122 10:52:24.547" endtime="20210122 10:52:24.600"></status>
+</kw>
+<status status="FAIL" starttime="20210122 10:52:13.706" endtime="20210122 10:52:24.600" critical="yes"> != Invalid Username or Password.</status>
+</test>
+<test id="s1-t4" name="T-4: Check Login Fuctionality with Username(Valid) and Password(Invalid)">
+<kw name="Test Setup" library="GenericFunction">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:24.603" level="INFO">Opening browser 'chrome' to base url 'https://vantxqa.livmor.com/userLogin'.</msg>
+<status status="PASS" starttime="20210122 10:52:24.602" endtime="20210122 10:52:33.212"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210122 10:52:33.213" endtime="20210122 10:52:34.332"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:52:24.602" endtime="20210122 10:52:34.332"></status>
+</kw>
+<kw name="Login to Livmor Portal" library="Login_Functionality">
+<arguments>
+<arg>username=${login_patient_username_invalid}</arg>
+<arg>password=${login_patient_password_valid}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${login_page_username_field}</arg>
+<arg>timeout=15 seconds</arg>
+<arg>error=Element not present</arg>
+</arguments>
+<status status="PASS" starttime="20210122 10:52:34.334" endtime="20210122 10:52:34.352"></status>
+</kw>
+<kw name="Enter Username" library="Login_Functionality">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${login_page_username_field}</arg>
+<arg>timeout=15 seconds</arg>
+<arg>error=username field not present</arg>
+</arguments>
+<status status="PASS" starttime="20210122 10:52:34.353" endtime="20210122 10:52:34.365"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_username_field}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:34.365" level="INFO">Clicking element '//input[@id="userId"]'.</msg>
+<status status="PASS" starttime="20210122 10:52:34.365" endtime="20210122 10:52:34.434"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_username_field}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:34.434" level="INFO">Typing text 'domini' into text field '//input[@id="userId"]'.</msg>
+<status status="PASS" starttime="20210122 10:52:34.434" endtime="20210122 10:52:34.518"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_login_button}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:34.519" level="INFO">Clicking element '//button[@id="btn_login"]'.</msg>
+<status status="PASS" starttime="20210122 10:52:34.518" endtime="20210122 10:52:34.596"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:52:34.352" endtime="20210122 10:52:34.596"></status>
+</kw>
+<kw name="Enter Password" library="Login_Functionality">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${login_page_password_field}</arg>
+<arg>timeout=15 seconds</arg>
+<arg>error=password field not present</arg>
+</arguments>
+<status status="PASS" starttime="20210122 10:52:34.597" endtime="20210122 10:52:34.614"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_password_field}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:34.615" level="INFO">Clicking element '//input[@id="password"]'.</msg>
+<status status="PASS" starttime="20210122 10:52:34.614" endtime="20210122 10:52:34.700"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_password_field}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:34.701" level="INFO">Typing password into text field '//input[@id="password"]'.</msg>
+<status status="PASS" starttime="20210122 10:52:34.701" endtime="20210122 10:52:34.791"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_login_button}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:34.792" level="INFO">Clicking element '//button[@id="btn_login"]'.</msg>
+<status status="PASS" starttime="20210122 10:52:34.792" endtime="20210122 10:52:35.887"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:52:34.596" endtime="20210122 10:52:35.888"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_login_button}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:35.889" level="INFO">Clicking element '//button[@id="btn_login"]'.</msg>
+<status status="PASS" starttime="20210122 10:52:35.888" endtime="20210122 10:52:35.956"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:52:34.333" endtime="20210122 10:52:35.956"></status>
+</kw>
+<kw name="Validate Error Message and Page URL on entering Wrong Credentials" library="Login_Functionality">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${login_error_message_locator}</arg>
+<arg>timeout=15 seconds</arg>
+<arg>error=Page still loading</arg>
+</arguments>
+<status status="PASS" starttime="20210122 10:52:35.957" endtime="20210122 10:52:35.974"></status>
+</kw>
+<kw name="Validate Page URL with wrong or blank credentials" library="Login_Functionality">
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser URL.</doc>
+<assign>
+<var>${return_url}</var>
+</assign>
+<msg timestamp="20210122 10:52:35.982" level="INFO">${return_url} = https://vantxqa.livmor.com/userLoginError?error=1</msg>
+<status status="PASS" starttime="20210122 10:52:35.974" endtime="20210122 10:52:35.982"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${return_url}</arg>
+<arg>${login_error_url}</arg>
+</arguments>
+<status status="PASS" starttime="20210122 10:52:35.982" endtime="20210122 10:52:35.983"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:52:35.974" endtime="20210122 10:52:35.983"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_error_message_locator}</arg>
+</arguments>
+<assign>
+<var>${return_error_message}</var>
+</assign>
+<msg timestamp="20210122 10:52:36.008" level="INFO">${return_error_message} = </msg>
+<status status="PASS" starttime="20210122 10:52:35.983" endtime="20210122 10:52:36.008"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${return_error_message}</arg>
+<arg>${login_error_message}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:36.009" level="FAIL"> != Invalid Username or Password.</msg>
+<status status="FAIL" starttime="20210122 10:52:36.008" endtime="20210122 10:52:36.009"></status>
+</kw>
+<status status="FAIL" starttime="20210122 10:52:35.957" endtime="20210122 10:52:36.009"></status>
+</kw>
+<status status="FAIL" starttime="20210122 10:52:24.601" endtime="20210122 10:52:36.010" critical="yes"> != Invalid Username or Password.</status>
+</test>
+<test id="s1-t5" name="T-5: Check Login Fuctionality with Username(Valid) and Password(Invalid)">
+<kw name="Test Setup" library="GenericFunction">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:36.015" level="INFO">Opening browser 'chrome' to base url 'https://vantxqa.livmor.com/userLogin'.</msg>
+<status status="PASS" starttime="20210122 10:52:36.014" endtime="20210122 10:52:52.022"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210122 10:52:52.022" endtime="20210122 10:52:53.137"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:52:36.014" endtime="20210122 10:52:53.137"></status>
+</kw>
+<kw name="Login to Livmor Portal" library="Login_Functionality">
+<arguments>
+<arg>username=${login_patient_username_invalid}</arg>
+<arg>password=${login_patient_password_valid}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${login_page_username_field}</arg>
+<arg>timeout=15 seconds</arg>
+<arg>error=Element not present</arg>
+</arguments>
+<status status="PASS" starttime="20210122 10:52:53.138" endtime="20210122 10:52:53.158"></status>
+</kw>
+<kw name="Enter Username" library="Login_Functionality">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${login_page_username_field}</arg>
+<arg>timeout=15 seconds</arg>
+<arg>error=username field not present</arg>
+</arguments>
+<status status="PASS" starttime="20210122 10:52:53.158" endtime="20210122 10:52:53.173"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_username_field}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:53.173" level="INFO">Clicking element '//input[@id="userId"]'.</msg>
+<status status="PASS" starttime="20210122 10:52:53.173" endtime="20210122 10:52:53.245"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_username_field}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:53.246" level="INFO">Typing text 'domini' into text field '//input[@id="userId"]'.</msg>
+<status status="PASS" starttime="20210122 10:52:53.245" endtime="20210122 10:52:53.331"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_login_button}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:53.332" level="INFO">Clicking element '//button[@id="btn_login"]'.</msg>
+<status status="PASS" starttime="20210122 10:52:53.332" endtime="20210122 10:52:53.415"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:52:53.158" endtime="20210122 10:52:53.415"></status>
+</kw>
+<kw name="Enter Password" library="Login_Functionality">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${login_page_password_field}</arg>
+<arg>timeout=15 seconds</arg>
+<arg>error=password field not present</arg>
+</arguments>
+<status status="PASS" starttime="20210122 10:52:53.416" endtime="20210122 10:52:53.434"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_password_field}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:53.434" level="INFO">Clicking element '//input[@id="password"]'.</msg>
+<status status="PASS" starttime="20210122 10:52:53.434" endtime="20210122 10:52:53.517"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_password_field}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:53.518" level="INFO">Typing password into text field '//input[@id="password"]'.</msg>
+<status status="PASS" starttime="20210122 10:52:53.517" endtime="20210122 10:52:53.600"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_login_button}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:53.601" level="INFO">Clicking element '//button[@id="btn_login"]'.</msg>
+<status status="PASS" starttime="20210122 10:52:53.600" endtime="20210122 10:52:54.693"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:52:53.415" endtime="20210122 10:52:54.693"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_login_button}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:54.694" level="INFO">Clicking element '//button[@id="btn_login"]'.</msg>
+<status status="PASS" starttime="20210122 10:52:54.693" endtime="20210122 10:52:54.757"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:52:53.137" endtime="20210122 10:52:54.758"></status>
+</kw>
+<kw name="Validate Error Message and Page URL on entering Wrong Credentials" library="Login_Functionality">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${login_error_message_locator}</arg>
+<arg>timeout=15 seconds</arg>
+<arg>error=Page still loading</arg>
+</arguments>
+<status status="PASS" starttime="20210122 10:52:54.758" endtime="20210122 10:52:54.775"></status>
+</kw>
+<kw name="Validate Page URL with wrong or blank credentials" library="Login_Functionality">
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser URL.</doc>
+<assign>
+<var>${return_url}</var>
+</assign>
+<msg timestamp="20210122 10:52:54.783" level="INFO">${return_url} = https://vantxqa.livmor.com/userLoginError?error=1</msg>
+<status status="PASS" starttime="20210122 10:52:54.775" endtime="20210122 10:52:54.783"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${return_url}</arg>
+<arg>${login_error_url}</arg>
+</arguments>
+<status status="PASS" starttime="20210122 10:52:54.783" endtime="20210122 10:52:54.783"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:52:54.775" endtime="20210122 10:52:54.783"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_error_message_locator}</arg>
+</arguments>
+<assign>
+<var>${return_error_message}</var>
+</assign>
+<msg timestamp="20210122 10:52:54.808" level="INFO">${return_error_message} = </msg>
+<status status="PASS" starttime="20210122 10:52:54.784" endtime="20210122 10:52:54.808"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${return_error_message}</arg>
+<arg>${login_error_message}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:54.809" level="FAIL"> != Invalid Username or Password.</msg>
+<status status="FAIL" starttime="20210122 10:52:54.808" endtime="20210122 10:52:54.809"></status>
+</kw>
+<status status="FAIL" starttime="20210122 10:52:54.758" endtime="20210122 10:52:54.809"></status>
+</kw>
+<status status="FAIL" starttime="20210122 10:52:36.012" endtime="20210122 10:52:54.810" critical="yes"> != Invalid Username or Password.</status>
+</test>
+<test id="s1-t6" name="T-6: Check Login Fuctionality with Username(Blank) and Password(Valid)">
+<kw name="Test Setup" library="GenericFunction">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210122 10:52:54.818" level="INFO">Opening browser 'chrome' to base url 'https://vantxqa.livmor.com/userLogin'.</msg>
+<status status="PASS" starttime="20210122 10:52:54.818" endtime="20210122 10:53:07.185"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210122 10:53:07.185" endtime="20210122 10:53:08.310"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:52:54.817" endtime="20210122 10:53:08.310"></status>
+</kw>
+<kw name="Enter Password" library="Login_Functionality">
+<arguments>
+<arg>password=${login_patient_password_valid}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${login_page_password_field}</arg>
+<arg>timeout=15 seconds</arg>
+<arg>error=password field not present</arg>
+</arguments>
+<status status="PASS" starttime="20210122 10:53:08.311" endtime="20210122 10:53:08.330"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_password_field}</arg>
+</arguments>
+<msg timestamp="20210122 10:53:08.331" level="INFO">Clicking element '//input[@id="password"]'.</msg>
+<status status="PASS" starttime="20210122 10:53:08.330" endtime="20210122 10:53:08.402"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_password_field}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20210122 10:53:08.403" level="INFO">Typing password into text field '//input[@id="password"]'.</msg>
+<status status="PASS" starttime="20210122 10:53:08.402" endtime="20210122 10:53:08.493"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_login_button}</arg>
+</arguments>
+<msg timestamp="20210122 10:53:08.494" level="INFO">Clicking element '//button[@id="btn_login"]'.</msg>
+<status status="PASS" starttime="20210122 10:53:08.493" endtime="20210122 10:53:08.593"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:53:08.310" endtime="20210122 10:53:08.593"></status>
+</kw>
+<kw name="Validate Error message when Username is not entered" library="Login_Functionality">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${login_error_blank_username_locator}</arg>
+<arg>timeout=15 seconds</arg>
+<arg>error=username msg not visible</arg>
+</arguments>
+<status status="PASS" starttime="20210122 10:53:08.595" endtime="20210122 10:53:08.620"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_error_blank_username_locator}</arg>
+</arguments>
+<assign>
+<var>${return_uname_message}</var>
+</assign>
+<msg timestamp="20210122 10:53:08.679" level="INFO">${return_uname_message} = Username required</msg>
+<status status="PASS" starttime="20210122 10:53:08.620" endtime="20210122 10:53:08.680"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${return_uname_message}</arg>
+<arg>${login_error_blank_username}</arg>
+</arguments>
+<status status="PASS" starttime="20210122 10:53:08.680" endtime="20210122 10:53:08.681"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:53:08.594" endtime="20210122 10:53:08.683"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210122 10:53:08.689" endtime="20210122 10:53:19.460"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:52:54.816" endtime="20210122 10:53:19.461" critical="yes"></status>
+</test>
+<test id="s1-t7" name="T-7: Check Login Fuctionality with Username(Valid) and Password(Blank)">
+<kw name="Test Setup" library="GenericFunction">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210122 10:53:19.464" level="INFO">Opening browser 'chrome' to base url 'https://vantxqa.livmor.com/userLogin'.</msg>
+<status status="PASS" starttime="20210122 10:53:19.464" endtime="20210122 10:54:29.288"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210122 10:54:29.288" endtime="20210122 10:54:30.401"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:53:19.463" endtime="20210122 10:54:30.401"></status>
+</kw>
+<kw name="Enter Username" library="Login_Functionality">
+<arguments>
+<arg>password=${login_patient_username_valid}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${login_page_username_field}</arg>
+<arg>timeout=15 seconds</arg>
+<arg>error=username field not present</arg>
+</arguments>
+<status status="PASS" starttime="20210122 10:54:30.402" endtime="20210122 10:54:30.422"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_username_field}</arg>
+</arguments>
+<msg timestamp="20210122 10:54:30.422" level="INFO">Clicking element '//input[@id="userId"]'.</msg>
+<status status="PASS" starttime="20210122 10:54:30.422" endtime="20210122 10:54:30.497"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_username_field}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20210122 10:54:30.498" level="INFO">Typing text 'password=dominicbose' into text field '//input[@id="userId"]'.</msg>
+<status status="PASS" starttime="20210122 10:54:30.497" endtime="20210122 10:54:30.622"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_login_button}</arg>
+</arguments>
+<msg timestamp="20210122 10:54:30.623" level="INFO">Clicking element '//button[@id="btn_login"]'.</msg>
+<status status="PASS" starttime="20210122 10:54:30.622" endtime="20210122 10:54:30.700"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:54:30.402" endtime="20210122 10:54:30.700"></status>
+</kw>
+<kw name="Validate Error message when Password is not entered" library="Login_Functionality">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${login_error_blank_password_locator}</arg>
+<arg>timeout=15 seconds</arg>
+<arg>error=pass msg not visible</arg>
+</arguments>
+<status status="PASS" starttime="20210122 10:54:30.702" endtime="20210122 10:54:30.724"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_error_blank_password_locator}</arg>
+</arguments>
+<assign>
+<var>${return_pass_message}</var>
+</assign>
+<msg timestamp="20210122 10:54:30.757" level="INFO">${return_pass_message} = Password required</msg>
+<status status="PASS" starttime="20210122 10:54:30.724" endtime="20210122 10:54:30.757"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${return_pass_message}</arg>
+<arg>${login_error_blank_password}</arg>
+</arguments>
+<status status="PASS" starttime="20210122 10:54:30.758" endtime="20210122 10:54:30.758"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:54:30.701" endtime="20210122 10:54:30.759"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210122 10:54:30.759" endtime="20210122 10:54:32.917"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:53:19.462" endtime="20210122 10:54:32.918" critical="yes"></status>
+</test>
+<test id="s1-t8" name="T-8: After Successful Login Redirecting to correct Page">
+<kw name="Test Setup" library="GenericFunction">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210122 10:54:32.920" level="INFO">Opening browser 'chrome' to base url 'https://vantxqa.livmor.com/userLogin'.</msg>
+<status status="PASS" starttime="20210122 10:54:32.920" endtime="20210122 10:54:45.373"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210122 10:54:45.373" endtime="20210122 10:54:46.844"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:54:32.920" endtime="20210122 10:54:46.844"></status>
+</kw>
+<kw name="Login to Livmor Portal" library="Login_Functionality">
+<arguments>
+<arg>username=${login_patient_username_valid}</arg>
+<arg>password=${login_patient_password_valid}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${login_page_username_field}</arg>
+<arg>timeout=15 seconds</arg>
+<arg>error=Element not present</arg>
+</arguments>
+<status status="PASS" starttime="20210122 10:54:46.845" endtime="20210122 10:54:46.862"></status>
+</kw>
+<kw name="Enter Username" library="Login_Functionality">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${login_page_username_field}</arg>
+<arg>timeout=15 seconds</arg>
+<arg>error=username field not present</arg>
+</arguments>
+<status status="PASS" starttime="20210122 10:54:46.863" endtime="20210122 10:54:46.875"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_username_field}</arg>
+</arguments>
+<msg timestamp="20210122 10:54:46.876" level="INFO">Clicking element '//input[@id="userId"]'.</msg>
+<status status="PASS" starttime="20210122 10:54:46.875" endtime="20210122 10:54:46.948"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_username_field}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20210122 10:54:46.949" level="INFO">Typing text 'dominicbose' into text field '//input[@id="userId"]'.</msg>
+<status status="PASS" starttime="20210122 10:54:46.948" endtime="20210122 10:54:47.044"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_login_button}</arg>
+</arguments>
+<msg timestamp="20210122 10:54:47.045" level="INFO">Clicking element '//button[@id="btn_login"]'.</msg>
+<status status="PASS" starttime="20210122 10:54:47.045" endtime="20210122 10:54:47.121"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:54:46.863" endtime="20210122 10:54:47.121"></status>
+</kw>
+<kw name="Enter Password" library="Login_Functionality">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${login_page_password_field}</arg>
+<arg>timeout=15 seconds</arg>
+<arg>error=password field not present</arg>
+</arguments>
+<status status="PASS" starttime="20210122 10:54:47.122" endtime="20210122 10:54:47.140"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_password_field}</arg>
+</arguments>
+<msg timestamp="20210122 10:54:47.140" level="INFO">Clicking element '//input[@id="password"]'.</msg>
+<status status="PASS" starttime="20210122 10:54:47.140" endtime="20210122 10:54:47.231"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_password_field}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20210122 10:54:47.232" level="INFO">Typing password into text field '//input[@id="password"]'.</msg>
+<status status="PASS" starttime="20210122 10:54:47.231" endtime="20210122 10:54:47.323"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_login_button}</arg>
+</arguments>
+<msg timestamp="20210122 10:54:47.323" level="INFO">Clicking element '//button[@id="btn_login"]'.</msg>
+<status status="PASS" starttime="20210122 10:54:47.323" endtime="20210122 10:55:11.650"></status>
+</kw>
+<status status="PASS" starttime="20210122 10:54:47.121" endtime="20210122 10:55:11.650"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_page_login_button}</arg>
+</arguments>
+<msg timestamp="20210122 10:55:11.651" level="INFO">Clicking element '//button[@id="btn_login"]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20210122 10:55:11.988" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210122 10:55:11.667" endtime="20210122 10:55:11.988"></status>
+</kw>
+<msg timestamp="20210122 10:55:12.029" level="FAIL">Element with locator '//button[@id="btn_login"]' not found.</msg>
+<status status="FAIL" starttime="20210122 10:55:11.650" endtime="20210122 10:55:12.029"></status>
+</kw>
+<status status="FAIL" starttime="20210122 10:54:46.844" endtime="20210122 10:55:12.029"></status>
+</kw>
+<status status="FAIL" starttime="20210122 10:54:32.919" endtime="20210122 10:55:12.030" critical="yes">Element with locator '//button[@id="btn_login"]' not found.</status>
+</test>
+<status status="FAIL" starttime="20210122 10:51:49.521" endtime="20210122 10:55:12.032"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="5">Critical Tests</stat>
+<stat pass="3" fail="5">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="5" id="s1" name="WebLoginPage">WebLoginPage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
