@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210115 05:28:55.232" rpa="false">
+<suite id="s1" name="Youtube" source="G:\Selenium\Python\Pycharm\PycharmProjects\PycharmProjects\Tasks\YouTube\Day-1\Tests\youtube.robot">
+<test id="s1-t1" name="T2:Screenshot should not be same">
+<kw name="Verify Video">
+<arguments>
+<arg>${img1}</arg>
+<arg>${img2}</arg>
+</arguments>
+<kw name="Image Compare" library="img_comp">
+<arguments>
+<arg>${img3}</arg>
+<arg>${img5}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20210115 05:28:57.682" level="INFO">Video is paused or not playing as images are equal</msg>
+<msg timestamp="20210115 05:28:57.682" level="INFO">${result} = False</msg>
+<status status="PASS" starttime="20210115 05:28:57.633" endtime="20210115 05:28:57.682"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${result}==True</arg>
+</arguments>
+<msg timestamp="20210115 05:28:57.683" level="FAIL">'False==True' should be true.</msg>
+<status status="FAIL" starttime="20210115 05:28:57.682" endtime="20210115 05:28:57.683"></status>
+</kw>
+<status status="FAIL" starttime="20210115 05:28:57.632" endtime="20210115 05:28:57.683"></status>
+</kw>
+<status status="FAIL" starttime="20210115 05:28:57.632" endtime="20210115 05:28:57.684" critical="yes">'False==True' should be true.</status>
+</test>
+<status status="FAIL" starttime="20210115 05:28:55.234" endtime="20210115 05:28:57.686"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Youtube">Youtube</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
